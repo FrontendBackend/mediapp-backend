@@ -18,7 +18,7 @@ public class Especialidad {
 	@Column(name = "nombre", nullable = false, length = 50)
 	private String nombre;
 
-	@Column(name = "descripcion", nullable = false, length = 50)
+	@Column(name = "descripcion", nullable = true, length = 50)
 	private String descripcion;
 
 	public Integer getIdEspecialidad() {

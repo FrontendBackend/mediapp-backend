@@ -28,7 +28,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.mitocode.exception.ModeloNotFoundException;
 import com.mitocode.model.Paciente;
+import com.mitocode.model.SignosVitales;
 import com.mitocode.service.IPacienteService;
+import com.mitocode.service.ISignosVitalesService;
 
 
 //@CrossOrigin(origins = "http://localhost:4200")
