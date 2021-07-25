@@ -22,9 +22,9 @@ class MediappBackendApplicationTests {
 	@Test
 	void verficarClave() {
 		Usuario us = new Usuario();
-		us.setIdUsuario(2);
-		us.setUsername("mitocode21@gmail.com");
-		us.setPassword(bcrypt.encode("123"));
+		us.setIdUsuario(5);
+		us.setUsername("valerio");
+		us.setPassword(bcrypt.encode("root"));
 		us.setEnabled(true);
 		
 		Usuario retorno = repo.save(us);

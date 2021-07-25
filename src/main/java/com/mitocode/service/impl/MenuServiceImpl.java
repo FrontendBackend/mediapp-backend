@@ -37,4 +37,9 @@ public class MenuServiceImpl extends CRUDImpl<Menu, Integer> implements IMenuSer
 		return repo.listarMenuPorUsuario(nombre);
 	}
 
+	@Override
+	public Menu obtenerMenuPorUsuario(Long nombre2) {
+		return repo.obtenerMenuPorUsuario(nombre2);
+	}
+
 }

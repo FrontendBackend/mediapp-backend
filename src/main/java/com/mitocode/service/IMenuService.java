@@ -8,4 +8,6 @@ public interface IMenuService extends ICRUD<Menu, Integer>{
 	
 	List<Menu> listarMenuPorUsuario(String nombre);
 
+	Menu obtenerMenuPorUsuario(Long nombre);
+
 }

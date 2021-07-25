@@ -8,11 +8,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mitocode.exception.ModeloNotFoundException;
 import com.mitocode.model.Menu;
 import com.mitocode.service.IMenuService;
 
@@ -37,4 +39,15 @@ public class MenuController {
 		return new ResponseEntity<List<Menu>>(menus, HttpStatus.OK);
 	}
 
+	@GetMapping("/obtenerMenuPorUsuario/{nombre2}")
+    public ResponseEntity<Menu> obtenerMenuPorUsuario(@PathVariable Long nombre2) throws Exception {
+		
+        Menu menu = service.obtenerMenuPorUsuario(nombre2);
+
+        if (menu == null) {
+            throw new ModeloNotFoundException("ID NO ENCONTRADO " + nombre2);
+        }
+
+        return new ResponseEntity<Menu>(menu, HttpStatus.OK);
+    }
 }
